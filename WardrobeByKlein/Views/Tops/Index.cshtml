@@ -1,0 +1,42 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/StyleSheetTops.css" rel="stylesheet" />
+@model IEnumerable<WardrobeByKlein.Models.Top>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 id="indexPageTitle">Tops</h2>
+
+<p id="createNewLink">@Html.ActionLink("Create New", "Create")</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <div class="row subrow">
+                    <div class="col-md-6 subcol">
+                        <img id="itemIndexPic" src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
+                    </div>
+                    <div class="col-md-6 subcol">
+                        <div class="caption">
+                            <h3 class="shirtName">@Html.DisplayFor(modelItem => item.TopName)</h3>
+                            <p> <em>@Html.DisplayNameFor(model => model.TopType)</em> :</p>  <p>@Html.DisplayFor(modelItem => item.TopType)</p>
+                            <p > <em>@Html.DisplayNameFor(model => model.TopColor)</em> :</p>  <p class="shirtColor">@Html.DisplayFor(modelItem => item.TopColor)</p>
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<button onclick="getHTML()">Find Top by Color</button>
+<p id="insert"></p>
+
+

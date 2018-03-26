@@ -1,0 +1,27 @@
+﻿<link href="~/StyleSheetShoes.css" rel="stylesheet" />
+@model WardrobeByKlein.Models.Sho
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 id="detailTitle">Shoe Details</h2>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(model => model.ShoeName)</h2>
+            <p><em>@Html.DisplayNameFor(model => model.ShoeType)</em> : @Html.DisplayFor(model => model.ShoeType)</p>
+            <p><em>@Html.DisplayNameFor(model => model.ShoeColor)</em> : @Html.DisplayFor(model => model.ShoeColor)</p>
+            <P><em>@Html.DisplayNameFor(model => model.ShoeSeason)</em> : @Html.DisplayFor(model => model.ShoeSeason)</P>
+            <p><em>@Html.DisplayNameFor(model => model.ShoeOccasion)</em> : @Html.DisplayFor(model => model.ShoeOccasion)</p>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+        <div class="col-md-6 picCol">
+            <img id="itemDetailPic" src="@Html.DisplayFor(model => model.ShoePhoto)" />
+        </div>
+    </div>
+</div>

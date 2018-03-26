@@ -1,0 +1,56 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Mr+Bedfort" rel="stylesheet">
+<script src="~/JavaScript.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+</head>
+<body onbeforeprint="Print()">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Ben's Wardrobe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
+                    <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        @*<hr />*@
+
+    </div>
+    <br />
+    <footer id="tweedleDum" onclick="SwapDivsWithClick('tweedleDee','tweedleDum')">
+        <p>Copyright 2018</p>
+        
+    </footer>
+    <footer style="display:none" id="tweedleDee" onclick="SwapDivsWithClick('tweedleDee','tweedleDum')">
+        <p>Created by Ben Klein</p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

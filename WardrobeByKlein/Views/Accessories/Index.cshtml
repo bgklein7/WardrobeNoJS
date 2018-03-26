@@ -1,0 +1,39 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/StyleSheetAccessories.css" rel="stylesheet" />
+@model IEnumerable<WardrobeByKlein.Models.Accessory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 id="indexPageTitle">Accessories</h2>
+
+<p id="createNewLink">@Html.ActionLink("Create New", "Create")</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <div class="row subrow">
+                    <div class="col-md-6 subcol">
+                        <img id="itemIndexPic" src="@Html.DisplayFor(modelItem => item.AccessoryPhoto)" />
+                    </div>
+                    <div class="col-md-6 subcol">
+                        <div class="caption">
+                            <h3>@Html.DisplayFor(modelItem => item.AccessoryName)</h3>
+                            <p> <em>@Html.DisplayNameFor(model => model.AccessoryType)</em> :  @Html.DisplayFor(modelItem => item.AccessoryType)</p>
+                            <p> <em>@Html.DisplayNameFor(model => model.AccessoryColor)</em> :  @Html.DisplayFor(modelItem => item.AccessoryColor)</p>
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

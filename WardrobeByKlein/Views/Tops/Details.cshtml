@@ -1,0 +1,28 @@
+﻿<link href="~/StyleSheetTops.css" rel="stylesheet" />
+@model WardrobeByKlein.Models.Top
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 id="detailTitle">Top Details</h2>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(model => model.TopName)</h2>
+            <p><em>@Html.DisplayNameFor(model => model.TopType)</em> : @Html.DisplayFor(model => model.TopType)</p>
+            <p><em>@Html.DisplayNameFor(model => model.TopColor)</em> : @Html.DisplayFor(model => model.TopColor)</p>
+            <P><em>@Html.DisplayNameFor(model => model.TopSeason)</em> : @Html.DisplayFor(model => model.TopSeason)</P>
+            <p><em>@Html.DisplayNameFor(model => model.TopOccasion)</em> : @Html.DisplayFor(model => model.TopOccasion)</p>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+        <div class="col-md-6 picCol">
+            <img id="itemDetailPic" src="@Html.DisplayFor(model => model.TopPhoto)" />
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,133 @@
+﻿/*Global Styling*/
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.navbar-inverse {
+    background-image: url('images/horizontalBlkPld.jpg');
+}
+ul.nav.navbar-nav li a:hover{
+    color: yellow!important;
+}
+a.navbar-brand{
+    font-family:'Mr Bedfort', cursive;
+    font-size: 24px;
+}
+footer {
+    background-color: white!important;
+    justify-content: center!important;
+    font-size: 20px!important;
+}
+footer p{
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center!important;
+
+}
+/*Index Pages Styling*/
+#itemIndexPic{
+    max-height: 100%;
+    max-width: 100%;
+}
+.thumbnail {
+    background-image: url('images/horizontalBlkPld.jpg');
+}
+.caption{
+    color: white!important;
+}
+#indexPageTitle{
+    color: white!important;
+}
+#createNewLink a{
+    color: white!important;
+}
+
+
+/*Detail Page Styling*/
+#itemDetailPic{
+    max-height: 400px;
+    max-width: 400px;
+}
+.jumbotron {
+    background-image: url('images/horizontalBlkPld.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.jumbotron a{
+    color: white!important;
+}
+.picCol{
+    background-color: whitesmoke;
+    text-align: center;
+}
+#detailTitle{
+    color: white!important;
+}
+
+/*Outfit Index Page Styling*/
+#outfitComponent{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+.outfitThumb {
+    max-width: 200px;
+    text-align: center;
+    align-content: center;
+}
+.outfitThumb h3{
+    color: white!important;
+}
+.outfitThumb a{
+    color: white!important;
+}
+
+#outfitCreateLink a{
+    color: black!important;
+}
+#styleAdviceBtn{
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    border-width: 1px;
+    padding: 10px 16px 10px 16px;
+}
+#pollBtn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    border-width: 1px;
+    padding: 10px 16px 10px 16px;
+}
+#insert{
+    color: white!important;
+    font-size: 24px;
+    font-weight: bold;
+}

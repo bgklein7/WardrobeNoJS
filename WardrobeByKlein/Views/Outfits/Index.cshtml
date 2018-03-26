@@ -1,0 +1,33 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/StyleSheetOutfit.css" rel="stylesheet" />
+<div class="container-fluid">
+    @model IEnumerable<WardrobeByKlein.Models.Outfit>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Outfit Viewer</h2>
+
+    <p id="outfitCreateLink">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <hr />
+    <div class="row">
+        @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="thumbnail outfitThumb">
+                <h3 id="outfitName">@Html.DisplayFor(modelItem => item.OutfitName)</h3>
+                <img id="outfitComponent" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+                <img id="outfitComponent" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" />
+                <img id="outfitComponent" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" />
+                <img id="outfitComponent" src="@Html.DisplayFor(modelItem => item.Sho.ShoePhoto)" />
+                <hr />
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+            </div>
+        </div>
+}
+    </div>
+</div>

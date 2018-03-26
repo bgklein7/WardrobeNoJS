@@ -1,0 +1,28 @@
+﻿<link href="~/StyleSheetBottoms.css" rel="stylesheet" />
+@model WardrobeByKlein.Models.Bottom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 id="detailTitle">Bottom Details</h2>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(model => model.BottomName)</h2>
+            <p><em>@Html.DisplayNameFor(model => model.BottomType)</em> : @Html.DisplayFor(model => model.BottomType)</p>
+            <p><em>@Html.DisplayNameFor(model => model.BottomColor)</em> : @Html.DisplayFor(model => model.BottomColor)</p>
+            <P><em>@Html.DisplayNameFor(model => model.BottomSeason)</em> : @Html.DisplayFor(model => model.BottomSeason)</P>
+            <p><em>@Html.DisplayNameFor(model => model.BottomOccasion)</em> : @Html.DisplayFor(model => model.BottomOccasion)</p>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+        <div class="col-md-6 picCol">
+            <img id="itemDetailPic" src="@Html.DisplayFor(model => model.BottomPhoto)" />
+        </div>
+    </div>
+</div>
+

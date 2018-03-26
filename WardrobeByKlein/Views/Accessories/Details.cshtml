@@ -1,0 +1,29 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/StyleSheetAccessories.css" rel="stylesheet" />
+@model WardrobeByKlein.Models.Accessory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 id="detailTitle">Accessory Details</h2>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>@Html.DisplayFor(model => model.AccessoryName)</h2>
+            <p><em>@Html.DisplayNameFor(model => model.AccessoryType)</em> : @Html.DisplayFor(model => model.AccessoryType)</p>
+            <p><em>@Html.DisplayNameFor(model => model.AccessoryColor)</em> : @Html.DisplayFor(model => model.AccessoryColor)</p>
+            <P><em>@Html.DisplayNameFor(model => model.AccessorySeason)</em> : @Html.DisplayFor(model => model.AccessorySeason)</P>
+            <p><em>@Html.DisplayNameFor(model => model.AccessoryOccasion)</em> : @Html.DisplayFor(model => model.AccessoryOccasion)</p>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+        <div class="col-md-6 picCol">
+            <img id="itemDetailPic" src="@Html.DisplayFor(model => model.AccessoryPhoto)" />
+        </div>
+    </div>
+</div>
+
